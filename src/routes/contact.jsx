@@ -1,8 +1,6 @@
-function Contact() {
+function Contact(props) {
     return (
-      <div>
-        <h1>Contactページ</h1>
-      </div>
+      <h2>{ props.message }</h2>
     );
   }
   
