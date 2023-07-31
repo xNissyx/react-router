@@ -3,6 +3,7 @@ import Home from './routes/home';
 import About from './routes/about';
 import Contact from './routes/contact';
 import NoMatch from './routes/nomatch';
+import Posts from './routes/posts';
 import './App.css';
 
 function App() {
@@ -21,6 +22,14 @@ function App() {
           </NavLink>
         </li>
         <li>
+          <NavLink
+            className={({ isActive }) => (isActive ? 'active' : undefined)}
+            to="/posts"
+          >
+            Posts
+          </NavLink>
+        </li>
+        <li>
           <Link to="/contact">Contact</Link>
         </li>
       </ul>
@@ -28,6 +37,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact message="Hello Contact" />} />
+        <Route path="/posts" element={<Posts />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
     </div>
