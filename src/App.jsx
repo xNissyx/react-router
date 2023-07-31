@@ -4,6 +4,7 @@ import About from './routes/about';
 import Contact from './routes/contact';
 import NoMatch from './routes/nomatch';
 import Posts from './routes/posts';
+import Post from './routes/post';
 import './App.css';
 
 function App() {
@@ -38,6 +39,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact message="Hello Contact" />} />
         <Route path="/posts" element={<Posts />} />
+          <Route path="/posts/post" element={<Post />} />
+        <Route />
         <Route path="*" element={<NoMatch />} />
       </Routes>
     </div>
